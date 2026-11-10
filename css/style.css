@@ -624,3 +624,43 @@ button {
     font-size: 12px;
     line-height: 1.8;
 }
+/* ==============================
+   8. CTA SECTION
+============================== */
+
+.cta-section {
+    padding: 80px 0;
+    text-align: center;
+    background:
+        linear-gradient(135deg, rgba(124,58,237,.8), rgba(49,24,92,.95)),
+        url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1500') center/cover;
+}
+
+.cta-content > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #e9ddff;
+}
+
+.cta-content h2 {
+    font-size: clamp(28px, 5vw, 45px);
+    margin: 18px 0;
+    line-height: 1.4;
+}
+
+.cta-content h2 span {
+    color: #e9d5ff;
+}
+
+.cta-content p {
+    max-width: 550px;
+    margin: 0 auto 28px;
+    color: #eee5ff;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.cta-section .primary-btn {
+    background: white;
+    color: #5b21b6;
+}
