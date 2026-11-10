@@ -51,5 +51,98 @@
         </div>
       </nav>
     </header>
+    <!-- Page Header -->
+    <section class="details-hero">
+        <div class="container">
+            <p class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-angle-right"></i>
+                <a href="events.html">Events</a>
+                <i class="fas fa-angle-right"></i>
+                <span>Event Details</span>
+            </p>
+
+            <h1>Event <span>Details</span></h1>
+            <p>Discover everything you need to know about this event.</p>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <main class="container details-section">
+
+        <div id="eventDetailsContent">
+
+            <div class="details-layout">
+
+                <!-- Event Image -->
+                <div class="details-image">
+                    <img id="detailImage" src="" alt="Event image">
+                    <span class="details-category" id="detailCategory"></span>
+                </div>
+
+                <!-- Event Information -->
+                <div class="details-info">
+
+                    <h2 id="detailName">Loading event...</h2>
+
+                    <p class="details-description" id="detailDescription"></p>
+
+                    <div class="details-meta">
+
+                        <div class="meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <div>
+                                <small>Date</small>
+                                <p id="detailDate"></p>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <small>Time</small>
+                                <p id="detailTime"></p>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <small>Location</small>
+                                <p id="detailLocation"></p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-ticket-alt"></i>
+                            <div>
+                                <small>Available Tickets</small>
+                                <p id="detailAvailable"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Ticket Selection -->
+                    <div class="ticket-selection">
+
+                        <div class="ticket-price">
+                            <small>Price per ticket</small>
+                            <h2 id="detailPrice">$0</h2>
+                        </div>
+
+                        <div class="quantity-control">
+                            <button id="decreaseBtn" aria-label="Decrease tickets">
+                                <i class="fas fa-minus"></i>
+                            </button>
+
+                            <span id="ticketQuantity">1</span>
+
+                            <button id="increaseBtn" aria-label="Increase tickets">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
   </body>
 </html>
