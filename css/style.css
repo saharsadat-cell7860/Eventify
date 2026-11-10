@@ -262,3 +262,71 @@ button {
     font-size: 11px;
     color: var(--text);
 }
+
+/* ==============================
+   HOME SEARCH BAR
+============================== */
+
+.home-search {
+    position: relative;
+    z-index: 5;
+    margin-top: -25px;
+}
+
+.search-box {
+    background: #201e30;
+    border: 1px solid rgba(167,139,250,.25);
+    border-radius: 12px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.search-input i {
+    color: var(--secondary);
+}
+
+.search-input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.search-input input::placeholder {
+    color: #9995aa;
+}
+
+.search-box .primary-btn {
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        min-height: 45px;
+    }
+
+    .search-box .primary-btn {
+        width: 100%;
+    }
+
+}
