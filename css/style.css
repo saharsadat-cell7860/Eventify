@@ -1,0 +1,149 @@
+/* ==============================
+   1. GLOBAL STYLES
+============================== */
+
+:root {
+    --bg: #11111b;
+    --bg-light: #191827;
+    --card: #1c1b2c;
+    --primary: #7c3aed;
+    --secondary: #a78bfa;
+    --white: #ffffff;
+    --text: #b9b8c9;
+    --border: rgba(255, 255, 255, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+
+/* ==============================
+   2. NAVBAR
+============================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(17, 17, 27, 0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.favorite-link {
+    position: relative;
+    font-size: 19px;
+    color: var(--white);
+}
+
+.favorite-link span {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--primary);
+    font-size: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.nav-btn {
+    background: var(--primary);
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
