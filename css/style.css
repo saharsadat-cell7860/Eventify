@@ -754,3 +754,178 @@ button {
 .footer-bottom span {
     color: #f43f5e;
 }
+/* ==============================
+   10. RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #191827;
+        border-bottom: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 5%;
+        gap: 23px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: 60% center;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .hero-stats h3 {
+        font-size: 21px;
+    }
+
+    .hero-stats span {
+        font-size: 10px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-actions {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content > p {
+        font-size: 12px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero-stats h3 {
+        font-size: 19px;
+    }
+
+    .hero-stats span {
+        font-size: 9px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .category-card {
+        padding: 20px 5px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .view-all {
+        margin-top: 5px;
+    }
+
+    .event-image {
+        height: 220px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        font-size: 29px;
+    }
+
+}
