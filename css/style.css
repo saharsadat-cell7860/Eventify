@@ -664,3 +664,93 @@ button {
     background: white;
     color: #5b21b6;
 }
+/* ==============================
+   9. FOOTER
+============================== */
+
+.footer {
+    background: #0c0b14;
+    padding: 65px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-about p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.9;
+    margin: 20px 0;
+    max-width: 280px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: var(--text);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-contact i {
+    color: var(--secondary);
+    margin-right: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: var(--card);
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    color: var(--text);
+    font-size: 11px;
+}
+
+.footer-bottom span {
+    color: #f43f5e;
+}
