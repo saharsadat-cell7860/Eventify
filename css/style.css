@@ -2061,3 +2061,87 @@ button {
     font-size: 13px;
     margin-bottom: 25px;
 }
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .tickets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-stats {
+        gap: 12px;
+    }
+
+    .ticket-stat-card {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .ticket-stat-card h3 {
+        font-size: 19px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .tickets-hero h1 {
+        font-size: 32px;
+    }
+
+    .my-tickets-section {
+        padding-top: 35px;
+        padding-bottom: 45px;
+    }
+
+    .ticket-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .tickets-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tickets-search {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tickets-filter select {
+        width: 100%;
+    }
+
+    .tickets-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .tickets-heading h2 {
+        font-size: 23px;
+    }
+
+    .ticket-card-top {
+        gap: 12px;
+        padding: 13px;
+    }
+
+    .ticket-card-image {
+        width: 100px;
+        height: 105px;
+    }
+
+    .ticket-card-info h3 {
+        font-size: 14px;
+    }
+
+    .ticket-card-bottom {
+        padding: 14px;
+    }
+
+    .ticket-card-actions {
+        padding: 12px 14px;
+    }
+
+}
