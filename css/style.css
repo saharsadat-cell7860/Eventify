@@ -1695,3 +1695,48 @@ button {
     }
 
 }
+/* Asila  */
+/* =================================
+   MY TICKETS PAGE
+================================= */
+
+.tickets-hero {
+    padding: 65px 0 55px;
+    text-align: center;
+    background: linear-gradient(135deg, #191827, #251b3d);
+}
+
+.tickets-hero .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.tickets-hero .breadcrumb a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.tickets-hero h1 {
+    color: #fff;
+    font-size: 40px;
+    margin: 20px 0 10px;
+}
+
+.tickets-hero h1 span,
+.tickets-heading h2 span {
+    color: #a78bfa;
+}
+
+.tickets-hero > .container > p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.my-tickets-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
