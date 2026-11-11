@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Eventify</title>
+        <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+     <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                Event<span>ify.</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="events.html">Explore Events</a>
+                <a href="event-details.html">Event Details</a>
+                <a href="booking.html" class="active">Booking</a>
+                <a href="my-tickets.html">My Tickets</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <a href="my-tickets.html" class="favorite-link">
+                    <i class="far fa-heart"></i>
+                    <span id="favoriteCount">0</span>
+                </a>
+
+                <a href="booking.html" class="nav-btn">
+                    Book Now
+                </a>
+
+                <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+<!-- Booking Hero -->
+    <section class="booking-hero">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-angle-right"></i>
+                <a href="events.html">Events</a>
+                <i class="fas fa-angle-right"></i>
+                <span>Booking</span>
+            </div>
+
+            <h1>Complete Your <span>Booking</span></h1>
+
+            <p>
+                Just a few steps away from your next unforgettable experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking Section -->
+    <main class="container booking-section" id="bookingSection">
+
+        <div class="booking-layout">
+
+            <!-- Booking Form -->
+            <div class="booking-form-container">
+
+                <div class="booking-heading">
+                    <span class="section-tag">YOUR INFORMATION</span>
+                    <h2>Personal <span>Details</span></h2>
+                    <p>Please enter your information to complete your booking.</p>
+                </div>
+
+
+                <form id="bookingForm" novalidate>
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="customerName">Full Name</label>
+
+                        <div class="booking-input">
+                            <i class="far fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <small class="form-error" id="nameError"></small>
+                    </div>
+
+   <!-- Email -->
+                    <div class="form-group">
+                        <label for="customerEmail">Email Address</label>
+
+                        <div class="booking-input">
+                            <i class="far fa-envelope"></i>
+                            <input
+                                type="email"
+                                id="customerEmail"
+                                placeholder="example@email.com"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <small class="form-error" id="emailError"></small>
+                    </div>
+          <!-- Phone -->
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number</label>
+
+                        <div class="booking-input">
+                            <i class="fas fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                            >
+                        </div>
+
+                        <small class="form-error" id="phoneError"></small>
+                    </div>
+
+
+                    <!-- Ticket Quantity -->
+                    <div class="form-group">
+                        <label for="bookingQuantity">Number of Tickets</label>
+
+                        <div class="booking-input">
+                            <i class="fas fa-ticket-alt"></i>
+
+                            <input
+                                type="number"
+                                id="bookingQuantity"
+                                min="1"
+                                value="1"
+                            >
+                        </div>
+
+                        <small class="form-error" id="quantityError"></small>
+                    </div>
+    <!-- Payment Method -->
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+
+                        <div class="booking-input">
+                            <i class="far fa-credit-card"></i>
+
+                            <select id="paymentMethod">
+                                <option value="">Select payment method</option>
+                                <option value="Card">Credit / Debit Card</option>
+                                <option value="Cash">Cash Payment</option>
+                            </select>
+                        </div>
+
+                        <small class="form-error" id="paymentError"></small>
+                    </div>
+     <!-- Terms -->
+                    <div class="terms-group">
+
+                        <input type="checkbox" id="terms">
+
+                        <label for="terms">
+                            I agree to the terms and conditions.
+                        </label>
+
+                    </div>
+
+                    <small class="form-error" id="termsError"></small>
+
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary confirm-booking-btn">
+                        Confirm Booking
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Booking Summary -->
+            <aside class="booking-summary">
+
+                <div class="summary-heading">
+                    <h2>Booking <span>Summary</span></h2>
+                    <p>Review your event details.</p>
+                </div>
+
+
+                <div id="bookingEventInfo">
+
+                    <div class="summary-image">
+                        <img id="bookingImage" src="" alt="Event image">
+                    </div>
+
+                    <div class="summary-event-info">
+
+                        <span id="bookingCategory"></span>
+
+                        <h3 id="bookingEventName">Loading event...</h3>
+
+                        <p>
+                            <i class="far fa-calendar-alt"></i>
+                            <span id="bookingDate"></span>
+                        </p><p>
+                            <i class="far fa-clock"></i>
+                            <span id="bookingTime"></span>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="bookingLocation"></span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row">
+                    <span>Ticket Price</span>
+                    <strong id="summaryPrice">$0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Quantity</span>
+                    <strong id="summaryQuantity">1</strong>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <strong id="summaryTotal">$0</strong>
+                </div>
+
+                <div class="summary-note">
+                    <i class="fas fa-lock"></i>
+                    Your information is kept private.
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+ <!-- Error Section -->
+    <section class="booking-error container" id="bookingError"
+        style="display: none;">
+
+        <i class="fas fa-calendar-times"></i>
+
+        <h2>Event Not Found!</h2>
+
+        <p>
+            Please select an event before making a booking.
+        </p>
+
+        <a href="events.html" class="btn btn-primary">
+            Explore Events
+        </a>
+
+    </section>
+
+
+    <!-- Success Message -->
+    <section class="booking-success container" id="bookingSuccess"
+        style="display: none;">
+
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <h2>Booking <span>Successful!</span></h2>
+
+        <p>
+            Your booking has been saved successfully.
+        </p>
+
+        <div class="success-details">
+            <p>Booking ID: <strong id="successBookingId"></strong></p>
+            <p>Event: <strong id="successEventName"></strong></p>
+            <p>Tickets: <strong id="successQuantity"></strong></p>
+            <p>Total: <strong id="successTotal"></strong></p>
+        </div>
+
+        <a href="my-tickets.html" class="btn btn-primary">
+            View My Tickets
+        </a>
+
+        <a href="events.html" class="back-events-link">
+            Explore More Events
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a href="index.html" class="logo">
+                    Event<span>ify.</span>
+                </a>
+
+                <p>
+                    Discover, explore and book unforgettable
+                    experiences with Eventify.
+                </p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Explore Events</a>
+                <a href="event-details.html">Event Details</a>
+                <a href="booking.html">Booking</a>
+                <a href="my-tickets.html">My Tickets</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    info@eventify.com
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +93 700 000 000
+                </p>
+
+
+
+</body>
+</html>
