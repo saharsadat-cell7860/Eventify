@@ -76,6 +76,115 @@
 
     </section>
 
+    <!-- Tickets Section -->
+    <main class="container my-tickets-section">
+
+        <!-- Statistics -->
+        <div class="ticket-stats">
+
+            <div class="ticket-stat-card">
+                <div class="ticket-stat-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+
+                <div>
+                    <p>Total Bookings</p>
+                    <h3 id="totalBookings">0</h3>
+                </div>
+            </div>
+
+
+            <div class="ticket-stat-card">
+                <div class="ticket-stat-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <div>
+                    <p>Total Tickets</p>
+                    <h3 id="totalTickets">0</h3>
+                </div>
+            </div>
+
+
+            <div class="ticket-stat-card">
+                <div class="ticket-stat-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+
+                <div>
+                    <p>Total Spent</p>
+                    <h3 id="totalSpent">$0</h3>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Search and Filter -->
+        <div class="tickets-toolbar">
+
+            <div class="tickets-search">
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="ticketSearch"
+                    placeholder="Search by event name or booking ID..."
+                >
+            </div>
+
+            <div class="tickets-filter">
+                <select id="statusFilter">
+                    <option value="All">All Bookings</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <!-- Results Heading -->
+        <div class="tickets-heading">
+
+            <div>
+                <span class="section-tag">YOUR COLLECTION</span>
+                <h2>Booked <span>Events</span></h2>
+            </div>
+
+            <p>
+                <span id="ticketResultCount">0</span> bookings found
+            </p>
+
+        </div>
+
+
+        <!-- Tickets Container -->
+        <div class="tickets-grid" id="ticketsGrid"></div>
+
+
+        <!-- Empty State -->
+        <div class="tickets-empty" id="ticketsEmpty"
+            style="display: none;">
+
+            <div class="empty-ticket-icon">
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+
+            <h2>No Tickets Found</h2>
+
+            <p id="emptyMessage">
+                You haven't booked any events yet.
+            </p>
+
+            <a href="events.html" class="btn btn-primary">
+                Explore Events
+            </a>
+
+        </div>
+
+    </main>
+
     <!-- JavaScript -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
