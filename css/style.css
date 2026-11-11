@@ -2027,3 +2027,37 @@ button {
     border-color: #7f1d1d;
     color: #fff;
 }
+/* EMPTY STATE */
+
+.tickets-empty {
+    text-align: center;
+    padding: 70px 20px;
+    background: #1c1b2c;
+    border: 1px solid #302d42;
+    border-radius: 15px;
+}
+
+.empty-ticket-icon {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    background: rgba(124, 58, 237, 0.15);
+    border-radius: 50%;
+    color: #a78bfa;
+    font-size: 32px;
+}
+
+.tickets-empty h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tickets-empty p {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
