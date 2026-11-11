@@ -229,7 +229,155 @@
                         <p>
                             <i class="far fa-calendar-alt"></i>
                             <span id="bookingDate"></span>
+                        </p><p>
+                            <i class="far fa-clock"></i>
+                            <span id="bookingTime"></span>
                         </p>
+
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="bookingLocation"></span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row">
+                    <span>Ticket Price</span>
+                    <strong id="summaryPrice">$0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Quantity</span>
+                    <strong id="summaryQuantity">1</strong>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <strong id="summaryTotal">$0</strong>
+                </div>
+
+                <div class="summary-note">
+                    <i class="fas fa-lock"></i>
+                    Your information is kept private.
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+ <!-- Error Section -->
+    <section class="booking-error container" id="bookingError"
+        style="display: none;">
+
+        <i class="fas fa-calendar-times"></i>
+
+        <h2>Event Not Found!</h2>
+
+        <p>
+            Please select an event before making a booking.
+        </p>
+
+        <a href="events.html" class="btn btn-primary">
+            Explore Events
+        </a>
+
+    </section>
+
+
+    <!-- Success Message -->
+    <section class="booking-success container" id="bookingSuccess"
+        style="display: none;">
+
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <h2>Booking <span>Successful!</span></h2>
+
+        <p>
+            Your booking has been saved successfully.
+        </p>
+
+        <div class="success-details">
+            <p>Booking ID: <strong id="successBookingId"></strong></p>
+            <p>Event: <strong id="successEventName"></strong></p>
+            <p>Tickets: <strong id="successQuantity"></strong></p>
+            <p>Total: <strong id="successTotal"></strong></p>
+        </div>
+
+        <a href="my-tickets.html" class="btn btn-primary">
+            View My Tickets
+        </a>
+
+        <a href="events.html" class="back-events-link">
+            Explore More Events
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a href="index.html" class="logo">
+                    Event<span>ify.</span>
+                </a>
+
+                <p>
+                    Discover, explore and book unforgettable
+                    experiences with Eventify.
+                </p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Explore Events</a>
+                <a href="event-details.html">Event Details</a>
+                <a href="booking.html">Booking</a>
+                <a href="my-tickets.html">My Tickets</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    info@eventify.com
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +93 700 000 000
+                </p>
+
 
 
 </body>
