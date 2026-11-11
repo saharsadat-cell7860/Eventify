@@ -164,6 +164,72 @@
 
                         <small class="form-error" id="quantityError"></small>
                     </div>
+    <!-- Payment Method -->
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+
+                        <div class="booking-input">
+                            <i class="far fa-credit-card"></i>
+
+                            <select id="paymentMethod">
+                                <option value="">Select payment method</option>
+                                <option value="Card">Credit / Debit Card</option>
+                                <option value="Cash">Cash Payment</option>
+                            </select>
+                        </div>
+
+                        <small class="form-error" id="paymentError"></small>
+                    </div>
+     <!-- Terms -->
+                    <div class="terms-group">
+
+                        <input type="checkbox" id="terms">
+
+                        <label for="terms">
+                            I agree to the terms and conditions.
+                        </label>
+
+                    </div>
+
+                    <small class="form-error" id="termsError"></small>
+
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary confirm-booking-btn">
+                        Confirm Booking
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Booking Summary -->
+            <aside class="booking-summary">
+
+                <div class="summary-heading">
+                    <h2>Booking <span>Summary</span></h2>
+                    <p>Review your event details.</p>
+                </div>
+
+
+                <div id="bookingEventInfo">
+
+                    <div class="summary-image">
+                        <img id="bookingImage" src="" alt="Event image">
+                    </div>
+
+                    <div class="summary-event-info">
+
+                        <span id="bookingCategory"></span>
+
+                        <h3 id="bookingEventName">Loading event...</h3>
+
+                        <p>
+                            <i class="far fa-calendar-alt"></i>
+                            <span id="bookingDate"></span>
+                        </p>
 
 
 </body>
