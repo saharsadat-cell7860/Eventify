@@ -128,6 +128,42 @@
 
                         <small class="form-error" id="emailError"></small>
                     </div>
+          <!-- Phone -->
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number</label>
+
+                        <div class="booking-input">
+                            <i class="fas fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                            >
+                        </div>
+
+                        <small class="form-error" id="phoneError"></small>
+                    </div>
+
+
+                    <!-- Ticket Quantity -->
+                    <div class="form-group">
+                        <label for="bookingQuantity">Number of Tickets</label>
+
+                        <div class="booking-input">
+                            <i class="fas fa-ticket-alt"></i>
+
+                            <input
+                                type="number"
+                                id="bookingQuantity"
+                                min="1"
+                                value="1"
+                            >
+                        </div>
+
+                        <small class="form-error" id="quantityError"></small>
+                    </div>
 
 
 </body>
