@@ -2265,3 +2265,103 @@ button {
     gap: 30px;
     align-items: start;
 }
+/* SIDEBAR */
+
+.filter-sidebar {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 23px;
+}
+
+.filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-heading h3 {
+    font-size: 16px;
+}
+
+.filter-heading h3 i {
+    color: var(--secondary);
+    margin-right: 8px;
+}
+
+.filter-heading button {
+    color: var(--secondary);
+    background: none;
+    border: none;
+    font-size: 11px;
+}
+
+.filter-heading button:hover {
+    color: white;
+}
+
+
+/* FILTER GROUPS */
+
+.filter-group {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group h4 {
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.filter-group label:last-child {
+    margin-bottom: 0;
+}
+
+.filter-group input[type="radio"],
+.filter-group input[type="checkbox"] {
+    accent-color: var(--primary);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+
+/* PRICE RANGE */
+
+.price-value {
+    font-size: 13px;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+#priceRange {
+    width: 100%;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    font-size: 10px;
+    margin-top: 8px;
+}
