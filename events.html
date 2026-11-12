@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Events | Eventify</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                Event<span>ify.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li>
+                    <a href="events.html" class="active">
+                        Explore Events
+                    </a>
+                </li>
+
+                <li><a href="event-details.html">Event Details</a></li>
+
+                <li><a href="booking.html">Booking</a></li>
+
+                <li><a href="my-tickets.html">My Tickets</a></li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <a href="my-tickets.html" class="favorite-link">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="favoriteCount">0</span>
+                </a>
+
+                <a href="booking.html" class="nav-btn">
+                    Get Tickets
+                </a>
+
+                <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- PAGE HERO -->
+
+    <section class="events-hero">
+
+        <div class="container">
+
+            <span class="section-subtitle">
+                DISCOVER SOMETHING AMAZING
+            </span>
+
+            <h1>
+                Explore <span>Events</span>
+            </h1>
+
+            <p>
+                Find your next unforgettable experience.
+                Discover concerts, workshops, exhibitions
+                and much more.
+            </p>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Explore Events</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH SECTION -->
+
+    <section class="explore-section">
+
+        <div class="container">
+
+            <div class="explore-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search events by name, location or category..."
+                >
+
+                <button id="clearSearch" aria-label="Clear search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS AND EVENTS -->
+
+            <div class="explore-layout">
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="filter-sidebar">
+
+                    <div class="filter-heading">
+
+                        <h3>
+                            <i class="fa-solid fa-sliders"></i>
+                            Filters
+                        </h3>
+
+                        <button id="resetFilters">
+                            Reset All
+                        </button>
+
+                    </div>
+
+
+                    <!-- CATEGORY FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Categories</h4>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="All"
+                            checked>
+                            All Events
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Music">
+                            Music
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Technology">
+                            Technology
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Art">
+                            Art & Culture
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Business">
+                            Business
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Workshop">
+                            Workshops
+                        </label>
+
+                    </div>
+
+
+                    <!-- PRICE FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Maximum Price</h4>
+
+                        <div class="price-value">
+                            Up to $<span id="priceValue">100</span>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="priceRange"
+                            min="0"
+                            max="100"
+                            value="100"
+                        >
+
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$100</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Availability</h4>
+
+                        <label>
+                            <input type="checkbox"
+                            id="availableOnly">
+                            Available tickets only
+                        </label>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- EVENTS CONTENT -->
+
+                <main class="events-content">
+
+
+                    <div class="events-toolbar">
+
+                        <div>
+                            <h2>All Events</h2>
+
+                            <p>
+                                Showing
+                                <span id="resultCount">0</span>
+                                events
+                            </p>
+                        </div>
+
+
+                        <div class="sort-box">
+
+                            <label for="sortSelect">
+                                Sort by:
+                            </label>
+
+                            <select id="sortSelect">
+
+                                <option value="default">
+                                    Featured
+                                </option>
+
+                                <option value="price-low">
+                                    Price: Low to High
+                                </option>
+
+                                <option value="price-high">
+                                    Price: High to Low
+                                </option>
+
+                                <option value="date">
+                                    Date: Earliest First
+                                </option>
+
+                                <option value="name">
+                                    Name: A to Z
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EVENT CARDS -->
+
+                    <div class="events-grid" id="allEventsGrid">
+
+                    </div>
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div class="empty-state" id="emptyState">
+
+                        <i class="fa-solid fa-calendar-xmark"></i>
+
+                        <h3>No Events Found</h3>
+
+                        <p>
+                            Try changing your search
+                            or filter settings.
+                        </p>
+
+                        <button id="emptyReset" class="primary-btn">
+                            Reset Filters
+                        </button>
+
+                    </div>
+
+                </main>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a href="index.html" class="logo">
+                    Event<span>ify.</span>
+                </a>
+
+                <p>
+                    Discover amazing events, book your tickets,
+                    and make every moment unforgettable.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Explore Events</a>
+                <a href="booking.html">Booking</a>
+                <a href="my-tickets.html">My Tickets</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Categories</h3>
+
+                <a href="events.html">Music</a>
+                <a href="events.html">Technology</a>
+                <a href="events.html">Art & Culture</a>
+                <a href="events.html">Workshops</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@eventify.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Herat, Afghanistan
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Eventify. All Rights Reserved.
+            </p>
+
+            <p>
+                Designed with <span>♥</span> by Eventify Team
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
