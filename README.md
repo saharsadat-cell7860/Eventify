@@ -94,11 +94,11 @@ Eventify features a modern dark-themed design with purple accents, elegant event
 
 This project was developed as a group project.
 
-- Member 1: [Name]
-- Member 2: [Name]
-- Member 3: [Name]
-- Member 4: [Name]
-- Member 5: [Name]
+- Member 1: [Sahar]
+- Member 2: [Goharshad]
+- Member 3: [Salma]
+- Member 4: [Baharah]
+- Member 5: [Asila]
 
 ---
 
