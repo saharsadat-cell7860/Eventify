@@ -106,6 +106,234 @@
 
     </section>
 
+    <!-- SEARCH SECTION -->
+
+    <section class="explore-section">
+
+        <div class="container">
+
+            <div class="explore-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search events by name, location or category..."
+                >
+
+                <button id="clearSearch" aria-label="Clear search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS AND EVENTS -->
+
+            <div class="explore-layout">
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="filter-sidebar">
+
+                    <div class="filter-heading">
+
+                        <h3>
+                            <i class="fa-solid fa-sliders"></i>
+                            Filters
+                        </h3>
+
+                        <button id="resetFilters">
+                            Reset All
+                        </button>
+
+                    </div>
+
+
+                    <!-- CATEGORY FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Categories</h4>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="All"
+                            checked>
+                            All Events
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Music">
+                            Music
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Technology">
+                            Technology
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Art">
+                            Art & Culture
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Business">
+                            Business
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                            name="category"
+                            value="Workshop">
+                            Workshops
+                        </label>
+
+                    </div>
+
+
+                    <!-- PRICE FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Maximum Price</h4>
+
+                        <div class="price-value">
+                            Up to $<span id="priceValue">100</span>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="priceRange"
+                            min="0"
+                            max="100"
+                            value="100"
+                        >
+
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$100</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY FILTER -->
+
+                    <div class="filter-group">
+
+                        <h4>Availability</h4>
+
+                        <label>
+                            <input type="checkbox"
+                            id="availableOnly">
+                            Available tickets only
+                        </label>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- EVENTS CONTENT -->
+
+                <main class="events-content">
+
+
+                    <div class="events-toolbar">
+
+                        <div>
+                            <h2>All Events</h2>
+
+                            <p>
+                                Showing
+                                <span id="resultCount">0</span>
+                                events
+                            </p>
+                        </div>
+
+
+                        <div class="sort-box">
+
+                            <label for="sortSelect">
+                                Sort by:
+                            </label>
+
+                            <select id="sortSelect">
+
+                                <option value="default">
+                                    Featured
+                                </option>
+
+                                <option value="price-low">
+                                    Price: Low to High
+                                </option>
+
+                                <option value="price-high">
+                                    Price: High to Low
+                                </option>
+
+                                <option value="date">
+                                    Date: Earliest First
+                                </option>
+
+                                <option value="name">
+                                    Name: A to Z
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EVENT CARDS -->
+
+                    <div class="events-grid" id="allEventsGrid">
+
+                    </div>
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div class="empty-state" id="emptyState">
+
+                        <i class="fa-solid fa-calendar-xmark"></i>
+
+                        <h3>No Events Found</h3>
+
+                        <p>
+                            Try changing your search
+                            or filter settings.
+                        </p>
+
+                        <button id="emptyReset" class="primary-btn">
+                            Reset Filters
+                        </button>
+
+                    </div>
+
+                </main>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- JAVASCRIPT -->
 
     <script src="js/data.js"></script>
