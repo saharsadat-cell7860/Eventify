@@ -2365,3 +2365,99 @@ button {
     font-size: 10px;
     margin-top: 8px;
 }
+/* TOOLBAR */
+
+.events-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.events-toolbar h2 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.events-toolbar p {
+    color: var(--text);
+    font-size: 11px;
+}
+
+.events-toolbar p span {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-box label {
+    color: var(--text);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.sort-box select {
+    background: var(--card);
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 11px;
+    outline: none;
+    max-width: 170px;
+}
+
+.sort-box select:focus {
+    border-color: var(--primary);
+}
+
+
+/* EVENT CARDS */
+
+.events-content .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.events-content .event-image {
+    height: 190px;
+}
+
+
+/* EMPTY STATE */
+
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 70px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.empty-state > i {
+    font-size: 45px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: var(--text);
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.empty-state .primary-btn {
+    cursor: pointer;
+}
